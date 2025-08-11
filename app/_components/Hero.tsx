@@ -51,7 +51,7 @@ function Hero() {
         {suggestions.map((suggestion, index) => (
           <div
             key={index}
-className="flex items-center gap-2 bg-gray-100 p-3 rounded-lg hover:bg-white transition-colors cursor-pointer"
+className="flex items-center gap-2 bg-gray-100 p-3 rounded-lg hover:bg-orange-500 transition-colors cursor-pointer"
           >
             {suggestion.icon}
             <h2 className="text-sm md:text-base font-medium">{suggestion.title}</h2>
