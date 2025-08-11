@@ -1,6 +1,7 @@
+import HeroVideoDialog from '@/components/magicui/hero-video-dialog'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { Globe2, SendIcon, Plane, Landmark } from 'lucide-react'
+import { Globe2, SendIcon, Plane, Landmark, ArrowDown } from 'lucide-react'
 import React from 'react'
 
 const suggestions = [
@@ -51,7 +52,7 @@ function Hero() {
         {suggestions.map((suggestion, index) => (
           <div
             key={index}
-className="flex items-center gap-2 bg-gray-100 p-3 rounded-lg hover:bg-orange-500 transition-colors cursor-pointer"
+            className="flex items-center gap-2 bg-gray-100 p-3 rounded-lg hover:bg-orange-500 hover:text-white transition-colors cursor-pointer"
           >
             {suggestion.icon}
             <h2 className="text-sm md:text-base font-medium">{suggestion.title}</h2>
@@ -59,11 +60,30 @@ className="flex items-center gap-2 bg-gray-100 p-3 rounded-lg hover:bg-orange-50
         ))}
       </div>
 
+      {/* Section intro text */}
+      <h2 className="my-7 mt-14 flex items-center justify-center gap-2 text-center text-lg">
+        Not sure where to start? <strong>See how it works</strong>
+        <ArrowDown className="h-5 w-5" />
+      </h2>
+
       {/* video section */}
+      <div className="mt-6 w-full flex justify-center">
+        <div className="max-w-xl w-full">
+          <HeroVideoDialog
+            className="block dark:hidden"
+            animationStyle="from-center"
+            videoSrc="https://www.w3schools.com/html/mov_bbb.mp4"
+            thumbnailSrc="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop"
+            thumbnailAlt="Beautiful beach destination"
+          />
+        </div>
+      </div>
     </div>
   )
 }
 
 export default Hero
+
+
 
 
