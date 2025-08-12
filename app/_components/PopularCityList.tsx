@@ -7,8 +7,7 @@ export function PopularCityList() {
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
   ));
-
-  return (
+ return (
     <div className="w-full h-full py-6">
       <h2 className="max-w-7xl pl-4 mx-auto text-sm md:text-lg font-bold text-neutral-800 dark:text-neutral-200 font-serif tracking-tight">
         ✈ Popular Travel Spots
@@ -19,6 +18,7 @@ export function PopularCityList() {
     </div>
   );
 }
+ 
 
 const DummyContent = ({ description, image }: { description: string; image: string }) => {
   return (
